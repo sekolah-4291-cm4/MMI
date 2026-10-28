@@ -122,6 +122,13 @@
                     {/* Baris Atas: Logo, Toggles & Jam */}
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4 p-3 border-b-2 border-gray-100 px-4 md:px-6">
                         <div className="flex items-center gap-3 self-start md:self-auto">
+                            <img 
+                                src="SK BANDAR PNG_2.jpg" 
+                                alt="Logo SK Bandar" 
+                                className="w-10 h-10 md:w-12 md:h-12 object-contain"
+                                onError={(e) => {
+                                    e.target.onerror = null; 
+                                    e.target.src = "https://placehold.co/100x100/FFD700/000000?text=Logo";
                                 }}
                             />
                             <h1 className="text-xl md:text-2xl font-extrabold text-gray-900 tracking-tight">Sistem MMI</h1>
@@ -175,7 +182,9 @@
                             </div>
                         </div>
 
-                        <div className="relative w-full lg:w-auto"
+                        <div className="relative w-full lg:w-auto">
+                            <Icon name="search" size={16} className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500" />
+                            <input type="text" placeholder="Cari Guru, Kelas atau Bilik Khas..." className="pl-11 pr-4 py-2 rounded-full border-2 border-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 w-full lg:w-80 bg-white shadow-[2px_2px_0px_#111827] font-semibold transition-all" />
                         </div>
                     </div>
                 </div>
